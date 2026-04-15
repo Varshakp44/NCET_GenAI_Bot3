@@ -1,9 +1,9 @@
 import streamlit as st
-from gorq import Groq
-st.set_page_config("PragyanAI Content generator",layout="Wide")
-st.title("PragyanAi_content Generator")
-st.image(f1.jpg)              
-client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+from groq import Groq
+
+st.set_page_config("PragyanAI Content Generator", layout="wide")
+st.title("PragyanAI – Content Generator")
+st.image("f3.jpeg")
 
 # Get Product Name and Audience for That Product
 product = st.text_input("Product")
@@ -29,5 +29,5 @@ if "text" in st.session_state:
             file_name="marketing_copy.txt",
             mime="text/plain"
         )
- else:
-        st.info("Generate content first")
+else:  
+       st.info("Generate content first")
